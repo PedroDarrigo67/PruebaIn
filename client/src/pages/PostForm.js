@@ -29,16 +29,16 @@ export function PostForm() {
         
           {(handleSubmit) => (
             <Form>
-              <Field name='title' placeholder='title' className='px-3 py-2 
+              <Field name='title' placeholder='title' className='my-2 px-3 py-2 
                 focus:outline-none rounded bg-gray-400 text-white w-full'/>
               <ErrorMessage component='p' className='text-red-400 text-sm' name='title' />
-              <Field name='descrition' placeholder='description' className='px-3 py-2 
+              <Field name='descrition' placeholder='description' className='my-2 px-3 py-2 
                 focus:outline-none rounded bg-gray-400 text-white w-full'/>
               <ErrorMessage component='p' className='text-red-400 text-sm'name='description' />
             
 
 
-            <button type='submit' onSubmit={handleSubmit} className="py-2 inline-block px-5 py-3 
+            <button type='submit' onSubmit={handleSubmit} className="my-2 py-2 inline-block px-5 py-3 
               drop-shadow-lg rounded-lg bg-indigo-500 text-white 
               tracking-wider font-semibold text-sm sm:text-base"> 
               Guardar

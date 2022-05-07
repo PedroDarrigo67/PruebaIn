@@ -3,6 +3,7 @@ import {Routes, Route} from 'react-router-dom'
 import logo from './img/logoSona.gif'
 import foto from './img/cordoba.jpg'
 import {PostProvider} from './context/postContext'
+import {Toaster }from 'react-hot-toast'
 
 
 
@@ -20,6 +21,7 @@ function App (){
           <Route path='/new' element={<PostForm/>} />
           <Route path='/*' element={<NotFoundPage/>} />
         </Routes>
+        <Toaster />
       </PostProvider>
     
       </div>

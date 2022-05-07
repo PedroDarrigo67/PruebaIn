@@ -1,5 +1,5 @@
 import {useState, createContext, useContext, useEffect} from 'react'
-import { getPostsRequest, createPostsRequest } from '../api/pots'
+import { getPostsRequest, createPostsRequest, deletePostsRequest } from '../api/pots'
 
 
 
@@ -17,16 +17,21 @@ export const PostProvider = ({children}) => {
   const getPosts = async () => {
     const res = await getPostsRequest()
     setPosts(res.data)
-  }
+  };
 
 
   const createPost = async (post) => {
     const res = await createPostsRequest(post)
     setPosts([...posts, res.data])
+  };
 
-  }
-
-
+  const deletePost = async id => {
+    const res = await deletePostsRequest(id)
+    if (res.status === 204) {
+      setPosts(posts.filter(post => post._id !== id));
+    }
+    
+  };
 
   useEffect(() => {
     getPosts()
@@ -35,7 +40,8 @@ export const PostProvider = ({children}) => {
   return <postContext.Provider value={{
     posts,
     getPosts,
-    createPost
+    createPost,
+    deletePost
   }}>
     {children}
   </postContext.Provider>
