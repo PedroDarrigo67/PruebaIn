@@ -1,5 +1,14 @@
+
+
+
 export function NotFoundPage() {
+  
+  
   return (
-    <div> no esta </div>
+    <div> 
+      no encontrado
+    
+    
+    </div>
   )
 }

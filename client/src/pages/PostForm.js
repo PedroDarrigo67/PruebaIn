@@ -1,5 +1,7 @@
 export function PostForm() {
   return (
-    <div> Post Form </div>
+    <div className='bg-gray-300 min-h-screen'>> 
+    
+    Post Form </div>
   )
 }
