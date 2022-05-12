@@ -5,7 +5,7 @@ import {
   createPostRequest,
   getPostRequest,
   updatePostRequest,
-} from "../api/pots";
+} from "../api/posts";
 
 const postContext = createContext();
 
@@ -53,9 +53,9 @@ export const PostProvider = ({ children }) => {
   const updatePost = async (id, post) => {
     try {
       const res = await updatePostRequest(id, post);
-        setPosts(posts.map((post) => (post._id === id ? res.data : post)));
+      setPosts(posts.map((post) => (post._id === id ? res.data : post)));
     } catch (error) {
-        console.error(error);
+      console.error(error);
     }
   };
 

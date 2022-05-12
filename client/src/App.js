@@ -1,10 +1,12 @@
 import {PostForm, HomePage, NotFoundPage,ListaPost} from './pages/index.js'
 import {Routes, Route} from 'react-router-dom'
-import logo from './img/logoSona.gif'
-import foto from './img/cordoba.jpg'
+
 import {PostProvider} from './context/postContext'
 import {Toaster }from 'react-hot-toast'
 
+
+import logo from './img/logoSona.gif'
+import foto from './img/cordoba.jpg'
 
 
 function App (){

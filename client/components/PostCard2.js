@@ -1,7 +1,7 @@
 
 
 
-export function PostCard({ post }) {
+export function PostCard2({ post }) {
   
 
 

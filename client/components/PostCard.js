@@ -2,7 +2,7 @@ import toast from 'react-hot-toast'
 import {usePosts} from '../context/postContext'
 import {useNavigate} from 'react-router-dom'
 
-export function PostCard2({post}) {
+export function PostCard({post}) {
   const{deletePost} = usePosts()
   const navigate = useNavigate()
 
