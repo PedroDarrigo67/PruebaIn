@@ -1,9 +1,9 @@
 import { usePosts } from "../context/postContext";
 import { Link } from "react-router-dom";
-import { PostCard } from "../components/PostCard";
+import { PostCard2 } from "../components/PostCard2";
 import { VscEmptyWindow } from "react-icons/vsc";
 
-export function HomePage() {
+export function ListaPost() {
   const { posts } = usePosts();
 
   const renderPost = () => {
@@ -16,9 +16,9 @@ export function HomePage() {
       );
 
     return (
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         {posts.map((post) => (
-          <PostCard key={post._id} post={post} />
+          <PostCard2 key={post._id} post={post} />
         ))}
       </div>
     );
@@ -31,10 +31,10 @@ export function HomePage() {
           Posts ({posts.length})
         </h1>
         <Link
-          to="/new"
+          to="/"
           className="bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-500"
         >
-          Create Post
+          Pagina Principal
         </Link>
       </header>
 
